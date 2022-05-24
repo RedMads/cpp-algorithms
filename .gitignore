@@ -33,3 +33,4 @@
 
 .vscode/
 *.o
+test.cpp
