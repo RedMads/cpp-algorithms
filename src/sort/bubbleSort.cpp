@@ -28,7 +28,7 @@ void bubbleSort(int arr[], int size) {
     for(int i=0; i < size; i++) {
         
         // loop over array x2 but (j < i) :D
-        for(int j=0; j < size - 1; j++) {
+        for(int j=0; j < size - i -1; j++) {
 
             // check if frist elemnet > secound element
             if(arr[j] > arr[j + 1])
