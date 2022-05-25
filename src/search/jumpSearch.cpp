@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-struct searchStats {
+struct SearchStats {
 
     int jumps = 0; // counting jumps
     int jumpSize = 0; // jump gap(size) sqrt(n)
@@ -10,7 +10,7 @@ struct searchStats {
 };
 
 
-int jumpSearch(int arr[], int size, int item, searchStats &stats) {
+int jumpSearch(int arr[], int size, int item, SearchStats &stats) {
 
     // calculate jump size
     stats.jumpSize = sqrt(size);
@@ -78,14 +78,14 @@ int main(int argc, char *argv[]) {
     */
 
     // initialize stats object
-    searchStats stats;
+    SearchStats stats;
 
     int arr[] = {-15, 0, 3, 39, 40, 48, 49, 71, 83, 97};
     int arrlen = sizeof(arr) / sizeof(arr[0]);
     int elementIndex = jumpSearch(arr, arrlen, 71, stats);
     int element = arr[elementIndex];
 
-    // when the linearSearch() return -1
+    // when the jumpSearch() return -1
     // searchElemnet value will be randomize so we set it to -1 (element not found)
     (element > arr[arrlen] && elementIndex < 0) ? element = -1 : element;
     
